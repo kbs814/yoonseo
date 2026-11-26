@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내 프로필 카드</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", sans-serif;
+      padding: 20px;
+    }
+
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 24px;
+      padding: 40px 32px;
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      background-color: #d1d5db;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .name:hover {
+      color: #764ba2;
+    }
+
+    .bio {
+      font-size: 15px;
+      color: #6b7280;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .favorites {
+      list-style: none;
+      text-align: left;
+      background-color: #f9fafb;
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+
+    .favorites li {
+      font-size: 15px;
+      color: #374151;
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .favorites li:not(:last-child) {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .emoji {
+      font-size: 20px;
+    }
+
+    /* 추가된 SNS 링크 버튼 영역 */
+    .sns-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .sns-btn {
+      flex: 1;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4b5563;
+      background-color: #f3f4f6;
+      padding: 10px 0;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 마우스 오버 시 배경색 및 글자색 변경 */
+    .sns-btn:hover {
+      background-color: #764ba2;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="profile-card">
+    <div class="avatar-placeholder" aria-label="프로필 이미지 자리"></div>
+
+    <h1 class="name">김윤서</h1>
+
+    <p class="bio">새로운 아이디어를 코드로 구현하는 것을 좋아하는 개발자입니다.</p>
+
+    <ul class="favorites">
+      <li><span class="emoji">☕</span> 따뜻한 아메리카노 한 잔</li>
+      <li><span class="emoji">🎧</span> 새벽에 듣는 로파이 음악</li>
+      <li><span class="emoji">🚶</span> 선선한 저녁 산책하기</li>
+    </ul>
+
+    <!-- 추가된 SNS 링크 버튼 3개 -->
+    <div class="sns-links">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="sns-btn">GitHub</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="sns-btn">Instagram</a>
+      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="sns-btn">YouTube</a>
+    </div>
+  </main>
+
+</body>
+</html>
